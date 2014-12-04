@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.beamfoundry.bundles.spring-data</groupId>
+		<artifactId>org.beamfoundry.bundles.spring-data</artifactId>
+		<version>1.4.4.RELEASE_1-SNAPSHOT</version>
+	</parent>
+
+    <groupId>org.beamfoundry.bundles.spring-data-jpa</groupId>
+    <artifactId>org.beamfoundry.bundles.spring-data-jpa.test</artifactId>
+	<version>1.6.4.RELEASE_1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+	<name>Bundles :: spring-data :: JPA Test</name>
+
+    <modules>
+        <module>common</module>
+        <module>datasource</module>
+        <module>openjpa</module>
+        <module>hibernate42</module>
+		<module>eclipselink24</module>
+		<module>eclipselink24-adapter</module>
+        <module>features</module>
+        <module>pax</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
+		<maven.test.skip>true</maven.test.skip>
+        <hsqldb.version>2.3.1</hsqldb.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.apache.openjpa</groupId>
+                <artifactId>openjpa</artifactId>
+                <version>2.3.0</version>
+            </dependency>
+	        <dependency>
+	  			<groupId>org.apache.geronimo.specs</groupId>
+	  			<artifactId>geronimo-jpa_2.0_spec</artifactId>
+	  			<version>1.1</version>
+	  		</dependency>
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-entitymanager</artifactId>
+                <version>4.2.7.Final</version>
+            </dependency>
+        	<dependency>
+	            <groupId>org.eclipse.persistence</groupId>
+	            <artifactId>javax.persistence</artifactId>
+	            <version>2.0.5</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>org.eclipse.persistence</groupId>
+	            <artifactId>org.eclipse.persistence.core</artifactId>
+	            <version>2.4.2</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>org.eclipse.persistence</groupId>
+	            <artifactId>org.eclipse.persistence.jpa</artifactId>
+	            <version>2.4.2</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>org.eclipse.persistence</groupId>
+	            <artifactId>org.eclipse.persistence.jpa.jpql</artifactId>
+	            <version>2.4.2</version>
+	        </dependency>
+            <dependency>
+                <groupId>org.hsqldb</groupId>
+                <artifactId>hsqldb</artifactId>
+                <version>${hsqldb.version}</version>
+            </dependency>
+            <dependency>
+            <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-commons</artifactId>
+				<version>${springdata.commons}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-jpa</artifactId>
+				<version>${springdata.jpa}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.felix</groupId>
+                    <artifactId>maven-bundle-plugin</artifactId>
+                    <version>2.4.0</version>
+                    <extensions>true</extensions>
+                </plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<configuration>
+						<skip>${maven.test.skip}</skip>
+					</configuration>
+				</plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+</project>

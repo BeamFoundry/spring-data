@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Licensed to the Apache Software Foundation (ASF) under one or more
+    contributor license agreements.  See the NOTICE file distributed with
+    this work for additional information regarding copyright ownership.
+    The ASF licenses this file to You under the Apache License, Version 2.0
+    (the "License"); you may not use this file except in compliance with
+    the License.  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<features name="spring-data-test-${project.parent.parent.version}" xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
+    <repository>mvn:org.beamfoundry.bundles.spring-data/org.beamfoundry.bundles.spring-data.features/${project.parent.parent.version}/xml/features</repository>
+    
+	<feature name="eclipselink" version="2.4.2" description="Eclipselink 2.4.2" resolver="(obr)">
+	    <feature>transaction</feature>
+        <bundle start-level="20">mvn:org.apache.commons/commons-lang3/3.1</bundle>
+        <bundle start-level="20">mvn:com.google.guava/guava/18.0</bundle>
+		<bundle start-level="20">mvn:org.eclipse.persistence/javax.persistence/2.0.5</bundle>
+		<bundle start-level="20">mvn:org.eclipse.persistence/org.eclipse.persistence.antlr/2.4.2</bundle>
+		<bundle start-level="20">mvn:org.eclipse.persistence/org.eclipse.persistence.asm/2.4.2</bundle>
+		<bundle start-level="20">mvn:org.eclipse.persistence/org.eclipse.persistence.core/2.4.2</bundle>
+		<bundle start-level="20">mvn:org.eclipse.persistence/org.eclipse.persistence.jpa.jpql/2.4.2</bundle>
+		<bundle start-level="20">mvn:org.eclipse.persistence/org.eclipse.persistence.jpa/2.4.2</bundle>
+	</feature>
+	
+	<feature name="eclipselink24" version="2.4.2" description="Eclipselink 2.4.2" resolver="(obr)">
+    	<feature version="2.4.2">eclipselink</feature>
+    	<bundle start-level="20">mvn:org.beamfoundry.bundles.spring-data-jpa.test/org.beamfoundry.bundles.spring-data-jpa.test-eclipselink24-adapter/${project.version}</bundle>
+    </feature>
+    
+    <feature name="spring-data_eclipselink24" version="${springdata.jpa}" description="Spring Data Hibernate" resolver="(obr)">
+    	<feature>transaction</feature>
+    	<feature>jndi</feature>
+    	<feature>jdbc</feature>
+    	<feature version="2.4.2">eclipselink24</feature>
+    	<feature>spring-data-jpa</feature>
+    	<bundle start-level="30">mvn:org.hsqldb/hsqldb/${hsqldb.version}</bundle>
+    </feature>
+
+	<feature name="hibernate42" version="4.2.7.Final" description="Hibernate 4.2.x JPA persistence engine support" resolver="(obr)">
+        <details>Enable Hibernate 4.2.x as persistence engine.</details>
+        <feature>transaction</feature>
+        <feature>http</feature>
+        <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.antlr/2.7.7_5</bundle>
+        <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.ant/1.8.2_2</bundle>
+        <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.dom4j/1.6.1_5</bundle>
+        <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.serp/1.14.1_1</bundle>
+        <bundle dependency="true">mvn:com.fasterxml/classmate/0.9.0</bundle>
+        <bundle dependency="true">mvn:org.javassist/javassist/3.18.1-GA</bundle>
+        <bundle dependency="true">mvn:org.jboss.spec.javax.security.jacc/jboss-jacc-api_1.4_spec/1.0.2.Final</bundle>
+        <bundle dependency="true">wrap:mvn:org.jboss/jandex/1.1.0.Final</bundle>
+        <bundle dependency="true">mvn:org.jboss.logging/jboss-logging/3.1.4.GA</bundle>
+        <bundle dependency="true">mvn:org.hibernate.common/hibernate-commons-annotations/4.0.4.Final</bundle>
+        <bundle start-level="100">mvn:org.hibernate/hibernate-core/4.2.7.Final</bundle>
+        <bundle start-level="100">mvn:org.hibernate/hibernate-entitymanager/4.2.7.Final</bundle>
+        <bundle start-level="100">mvn:org.hibernate/hibernate-osgi/4.2.7.Final</bundle>
+    </feature>
+    
+    <feature name="spring-data_hibernate42" version="${springdata.jpa}" description="Spring Data Hibernate" resolver="(obr)">
+    	<feature>transaction</feature>
+    	<feature>jndi</feature>
+    	<feature>jdbc</feature>
+    	<feature version="4.2.7.Final">hibernate42</feature>
+    	<feature>spring-data-jpa</feature>
+    	<bundle start-level="30">mvn:org.hsqldb/hsqldb/${hsqldb.version}</bundle>
+    </feature>
+</features>

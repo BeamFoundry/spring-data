@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <parent>
+    <artifactId>org.beamfoundry.bundles.spring-data-parent</artifactId>
+    <groupId>org.beamfoundry.bundles.spring-data</groupId>
+    <version>1.4.4.RELEASE_1-SNAPSHOT</version>
+    <relativePath>../spring-data-parent/pom.xml</relativePath>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.beamfoundry.bundles.spring-data</groupId>
+  <artifactId>org.beamfoundry.bundles.spring-data-mongodb-cross-store</artifactId>
+  <packaging>bundle</packaging>
+  <name>Bundles :: spring-data :: MongoDB Cross Store</name>
+  <version>1.5.4.RELEASE_1-SNAPSHOT</version>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-shade-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <artifactSet>
+                <includes>
+                  <include>${pkgGroupId}:spring-data-mongodb-cross-store</include>
+                </includes>
+              </artifactSet>
+              <filters>
+                <filter>
+                  <artifact>${pkgGroupId}:spring-data-mongodb-cross-store</artifact>
+                  <includes>
+                    <include>META-INF/aop-ajc.xml</include>
+                  </includes>
+                </filter>
+              </filters>
+              <promoteTransitiveDependencies>true</promoteTransitiveDependencies>
+              <createDependencyReducedPom>true</createDependencyReducedPom>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+  <properties>
+    <pkgVersion>1.5.2.RELEASE</pkgVersion>
+    <servicemix.osgi.import.pkg>com.mongodb;version="${mongo.osgi}",
+			javax.persistence,
+			org.aspectj.*;version="${aspectj}",
+			org.bson*;version="${mongo}",
+			org.slf4j;version="[1.7.0, 1.9.0)",
+			org.springframework.dao;version="[${spring.osgi},4.1)",
+			org.springframework.data.crossstore;version="${springdata.commons.osgi}",
+			org.springframework.data.mongodb;version="${pkgVersion}",
+			org.springframework.data.mongodb.core;version="${pkgVersion}",
+			org.springframework.data.mongodb.core.convert;version="${pkgVersion}",
+			org.springframework.orm.jpa.aspectj;version="[${spring},4.1)",
+			org.springframework.transaction.support;version="[${spring},4.1)",
+			org.springframework.util;version="[${spring},4.1)"</servicemix.osgi.import.pkg>
+    <servicemix.osgi.export.pkg>org.springframework.data</servicemix.osgi.export.pkg>
+    <pkgArtifactId>spring-data-mongodb-cross-store</pkgArtifactId>
+    <pkgGroupId>org.springframework.data</pkgGroupId>
+  </properties>
+</project>
+

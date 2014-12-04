@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Licensed to the Apache Software Foundation (ASF) under one or more
+    contributor license agreements.  See the NOTICE file distributed with
+    this work for additional information regarding copyright ownership.
+    The ASF licenses this file to You under the Apache License, Version 2.0
+    (the "License"); you may not use this file except in compliance with
+    the License.  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<features name="spring-data-${project.parent.version}" xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
+
+	<repository>mvn:org.apache.karaf.features/enterprise/3.0.1/xml/features</repository>
+	
+    <feature name='spring-data-commons' description='Spring Data Commons ${springdata.commons}' version='${springdata.commons}'>
+        <details>Spring Data Commons</details>
+        <feature version="[4.0,4.1)">spring</feature>
+        <feature version="[4.0,4.1)">spring-tx</feature>
+        <feature version="[4.0,4.1)">spring-oxm</feature>
+
+        <bundle start-level="20">mvn:commons-pool/commons-pool/1.5.6</bundle>
+        <bundle start-level="20">mvn:commons-dbcp/commons-dbcp/1.4</bundle>
+        
+        <bundle start-level="30">mvn:com.fasterxml.jackson.core/jackson-core/${jackson}</bundle>
+        <bundle start-level="30">mvn:com.fasterxml.jackson.core/jackson-databind/${jackson}</bundle>
+        <bundle start-level="30">mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson}</bundle>
+        <bundle start-level="30">mvn:com.google.guava/guava/${guava}</bundle>
+        <bundle start-level="30">mvn:com.mysema.querydsl/querydsl-core/${querydsl}</bundle>
+        <bundle start-level="30">mvn:com.mysema.commons/mysema-commons-lang/0.2.4</bundle>
+        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.javax-inject/1_2</bundle>
+        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jaxb-impl/2.2.6_1</bundle>
+        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.joda-time/2.3_1</bundle>
+        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jsr305/2.0.2_1</bundle>
+        <bundle start-level="30">mvn:org.beamfoundry.bundles.spring-data/org.beamfoundry.bundles.spring-data-commons/${springdata.commons}</bundle>
+    </feature>
+    
+    <feature name='spring-data-jpa' description='Spring Data JPA ${springdata.jpa}' version='${springdata.jpa}'>
+        <details>Spring Data JPA</details>
+        <feature version="${springdata.commons}">spring-data-commons</feature>
+        <feature version="[4.0,4.1)">spring-orm</feature>
+        <feature version="[4.0,4.1)">spring-aspects</feature>
+        <feature version="1.0.1">jpa</feature>
+        <bundle start-level="20">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aspectj/1.8.3_1</bundle>
+        <!-- <bundle start-level="40">mvn:com.mysema.querydsl/querydsl-jpa/${querydsl}</bundle> -->
+        <bundle start-level="40">mvn:org.beamfoundry.bundles.spring-data/org.beamfoundry.bundles.spring-data-jpa/${springdata.jpa}</bundle>
+	</feature>
+	
+    <feature name='spring-data-mongodb' description='Spring Data MongoDB ${springdata.mongodb}' version='${springdata.mongodb}'>
+        <details>Spring Data MongoDB</details>
+        <feature version="${springdata.commons}">spring-data-commons</feature>
+        <feature version="[4.0,4.1)">spring-aspects</feature>
+        <bundle dependency="true">mvn:javax.validation/validation-api/1.1.0.Final</bundle>
+        <bundle start-level="30">wrap:mvn:commons-lang/commons-lang/2.2</bundle>
+        <bundle start-level="20">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aspectj/1.8.3_1</bundle>
+        <bundle start-level="30">mvn:org.mongodb/mongo-java-driver/${mongo}</bundle>
+        <!-- <bundle start-level="30">mvn:com.mysema.codegen/codegen/${querydsl.codegen}</bundle> -->
+        <!-- <bundle start-level="30">mvn:com.mysema.querydsl/querydsl-mongodb/${querydsl}</bundle> -->
+        <!-- <bundle start-level="30">mvn:com.mysema.querydsl/querydsl-apt/${querydsl}</bundle> -->
+        <bundle start-level="35">mvn:org.beamfoundry.bundles.spring-data/org.beamfoundry.bundles.spring-data-mongodb/${springdata.mongodb}</bundle>
+	</feature>
+	
+    <feature name='spring-data-mongodb-cross-store' description='Spring Data MongoDB Cross Store ${springdata.mongodb}' version='${springdata.mongodb}'>
+        <details>Spring Data MongoDB Cross Store</details>
+        <feature version="${springdata.mongodb}">spring-data-mongodb</feature>
+        <feature version="${springdata.jpa}">spring-data-jpa</feature>
+        <feature version="[4.0,4.1)">spring-orm</feature>
+        <feature version="[4.0,4.1)">spring-aspects</feature>
+        <bundle start-level="40">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aspectj/1.8.3_1</bundle>
+        <bundle start-level="40">mvn:org.beamfoundry.bundles.spring-data/org.beamfoundry.bundles.spring-data-mongodb-cross-store/${springdata.mongodb}</bundle>
+	</feature>
+    
+</features>
