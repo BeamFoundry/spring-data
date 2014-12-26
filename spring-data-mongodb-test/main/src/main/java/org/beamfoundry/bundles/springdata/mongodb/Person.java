@@ -1,4 +1,4 @@
-package net.mil1.bundles.springdata.mongodb;
+package org.beamfoundry.bundles.springdata.mongodb;
 
 import static javax.persistence.GenerationType.AUTO;
 

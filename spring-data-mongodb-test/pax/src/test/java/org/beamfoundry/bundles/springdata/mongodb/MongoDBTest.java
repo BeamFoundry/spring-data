@@ -1,4 +1,4 @@
-package net.mil1.bundles.springdata.mongodb;
+package org.beamfoundry.bundles.springdata.mongodb;
 
 import static org.ops4j.pax.exam.CoreOptions.maven;
 import static org.ops4j.pax.exam.CoreOptions.mavenBundle;
@@ -17,6 +17,8 @@ import javax.inject.Inject;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.beamfoundry.bundles.springdata.mongodb.Person;
+import org.beamfoundry.bundles.springdata.mongodb.PersonService;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,7 +27,6 @@ import org.ops4j.pax.exam.Option;
 import org.ops4j.pax.exam.junit.PaxExam;
 import org.ops4j.pax.exam.karaf.options.KarafDistributionConfigurationFilePutOption;
 import org.ops4j.pax.exam.karaf.options.LogLevelOption.LogLevel;
-import net.mil1.bundles.springdata.mongodb.PersonService;
 
 @RunWith(PaxExam.class)
 public class MongoDBTest extends Assert {
@@ -62,26 +63,26 @@ public class MongoDBTest extends Assert {
                 mavenBundle().groupId("org.hsqldb").artifactId("hsqldb").versionAsInProject(),
                 
                 features(
-                        maven().groupId("net.mil1.bundles.spring-osgi").
-                        		artifactId("net.mil1.bundles.spring-osgi.features").
+                        maven().groupId("org.beamfoundry.bundles.spring-osgi").
+                        		artifactId("org.beamfoundry.bundles.spring-osgi.features").
                                 type("xml").classifier("features").version("LATEST"),
                         "spring-dm"),
                 features(
-                        maven().groupId("net.mil1.bundles.spring-data.test-jpa").
-                        		artifactId("net.mil1.bundles.spring-data.test-jpa.features").
+                        maven().groupId("org.beamfoundry.bundles.spring-data-jpa.test").
+                        		artifactId("org.beamfoundry.bundles.spring-data-jpa.test.features").
                                 type("xml").classifier("features").version("LATEST"),
                         "spring-data_hibernate42"),
                 features(
-                        maven().groupId("net.mil1.bundles.spring-data").
-                        		artifactId("net.mil1.bundles.spring-data.features").
+                        maven().groupId("org.beamfoundry.bundles.spring-data").
+                        		artifactId("org.beamfoundry.bundles.spring-data.features").
                                 type("xml").classifier("features").version("LATEST"),
                         "spring-data-mongodb", "spring-data-mongodb-cross-store"),
                         
-                mavenBundle().groupId("net.mil1.bundles.spring-data").
-            	artifactId("net.mil1.bundles.spring-data.test-mongodb-adapter").
+                mavenBundle().groupId("org.beamfoundry.bundles.spring-data-mongodb.test").
+            	artifactId("org.beamfoundry.bundles.spring-data-mongodb.test-adapter").
             		versionAsInProject(),
-                mavenBundle().groupId("net.mil1.bundles.spring-data").
-                	artifactId("net.mil1.bundles.spring-data.test-mongodb-main").
+                mavenBundle().groupId("org.beamfoundry.bundles.spring-data-mongodb.test").
+                	artifactId("org.beamfoundry.bundles.spring-data-mongodb.test-main").
                 		versionAsInProject()
         };
     }

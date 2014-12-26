@@ -1,4 +1,4 @@
-package net.mil1.bundles.springdata.mongodb;
+package org.beamfoundry.bundles.springdata.mongodb;
 
 import org.apache.commons.lang.builder.ToStringBuilder;
 import org.bson.types.ObjectId;

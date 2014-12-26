@@ -1,13 +1,12 @@
-package net.mil1.bundles.springdata.mongodb.test;
+package org.beamfoundry.bundles.springdata.mongodb.test;
 
 import javax.annotation.PostConstruct;
 
-import net.mil1.bundles.springdata.mongodb.Person;
-import net.mil1.bundles.springdata.mongodb.PersonDetails;
-import net.mil1.bundles.springdata.mongodb.PersonService;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.beamfoundry.bundles.springdata.mongodb.Person;
+import org.beamfoundry.bundles.springdata.mongodb.PersonDetails;
+import org.beamfoundry.bundles.springdata.mongodb.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;

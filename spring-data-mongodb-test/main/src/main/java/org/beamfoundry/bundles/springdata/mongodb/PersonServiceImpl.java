@@ -1,12 +1,11 @@
-package net.mil1.bundles.springdata.mongodb;
+package org.beamfoundry.bundles.springdata.mongodb;
 
 import javax.annotation.PostConstruct;
 
-import net.mil1.bundles.springdata.mongodb.jpa.repositories.PersonRepository;
-import net.mil1.bundles.springdata.mongodb.mongo.repositories.PersonContactDetailsRepository;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.beamfoundry.bundles.springdata.mongodb.jpa.repositories.PersonRepository;
+import org.beamfoundry.bundles.springdata.mongodb.mongo.repositories.PersonContactDetailsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.transaction.annotation.Transactional;

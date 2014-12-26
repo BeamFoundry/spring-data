@@ -1,7 +1,6 @@
-package net.mil1.bundles.springdata.mongodb.mongo.repositories;
+package org.beamfoundry.bundles.springdata.mongodb.mongo.repositories;
 
-import net.mil1.bundles.springdata.mongodb.PersonDetails;
-
+import org.beamfoundry.bundles.springdata.mongodb.PersonDetails;
 import org.bson.types.ObjectId;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
