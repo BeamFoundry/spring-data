@@ -62,12 +62,12 @@
             <dependency>
                 <groupId>org.springframework.data</groupId>
                 <artifactId>spring-data-mongodb</artifactId>
-				<version>${springdata.mongo}</version>
+				<version>${springdata.mongodb}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.data</groupId>
                 <artifactId>spring-data-mongodb-cross-store</artifactId>
-				<version>${springdata.mongo}</version>
+				<version>${springdata.mongodb}</version>
             </dependency>
 
 			<dependency>

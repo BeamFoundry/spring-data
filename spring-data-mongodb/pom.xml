@@ -38,7 +38,7 @@
     
         <pkgGroupId>org.springframework.data</pkgGroupId>
         <pkgArtifactId>spring-data-mongodb</pkgArtifactId>
-        <pkgVersion>1.5.2.RELEASE</pkgVersion>
+		<pkgVersion>${springdata.mongodb}</pkgVersion>
         <servicemix.osgi.export.pkg>
             org.springframework.data
         </servicemix.osgi.export.pkg>

@@ -88,8 +88,8 @@
 		<validation>1.0.0.GA</validation>
 		<objenesis>1.3</objenesis>
 		<mongo.osgi>${mongo}.RELEASE</mongo.osgi>
-		<springdata.mongo.osgi>1.5.4</springdata.mongo.osgi>
-		<springdata.mongo>${springdata.mongo.osgi}.RELEASE</springdata.mongo>
+		<springdata.mongodb.osgi>1.5.4</springdata.mongodb.osgi>
+		<springdata.mongodb>${springdata.mongodb.osgi}.RELEASE</springdata.mongodb>
 
 	</properties>
 

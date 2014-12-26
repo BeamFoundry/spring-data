@@ -35,7 +35,7 @@
 	<properties>
 		<springdata.commons>${springdata.commons.osgi}.RELEASE_${tag.version}</springdata.commons>
 		<springdata.jpa>${springdata.jpa.osgi}.RELEASE_${tag.version}</springdata.jpa>
-		<springdata.mongodb>${springdata.mongo.osgi}.RELEASE_${tag.version}</springdata.mongodb>
+		<springdata.mongodb>${springdata.mongodb.osgi}.RELEASE_${tag.version}</springdata.mongodb>
         
         <validation>1.0</validation>
         <objenesis>1.3</objenesis>

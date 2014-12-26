@@ -11,7 +11,7 @@
 
     <groupId>org.beamfoundry.bundles.spring-data-mongodb.test</groupId>
     <artifactId>org.beamfoundry.bundles.spring-data-mongodb.test-pax</artifactId>
-	<name>Bundles :: spring-data :: Test MongoDB : pax</name>
+	<name>Bundles :: spring-data :: MongoDB Test :: pax</name>
 
     <properties>
         <pax.exam.version>4.1.0</pax.exam.version>
