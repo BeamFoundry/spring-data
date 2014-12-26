@@ -3,7 +3,7 @@
   <parent>
     <artifactId>org.beamfoundry.bundles.spring-data-parent</artifactId>
     <groupId>org.beamfoundry.bundles.spring-data</groupId>
-    <version>1.4.4.RELEASE_2-SNAPSHOT</version>
+    <version>1.4.4.RELEASE_2</version>
     <relativePath>../spring-data-parent/pom.xml</relativePath>
   </parent>
   <modelVersion>4.0.0</modelVersion>
@@ -11,7 +11,7 @@
   <artifactId>org.beamfoundry.bundles.spring-data-jpa</artifactId>
   <packaging>bundle</packaging>
   <name>Bundles :: spring-data :: JPA</name>
-  <version>1.6.4.RELEASE_2-SNAPSHOT</version>
+  <version>1.6.4.RELEASE_2</version>
   <build>
     <plugins>
       <plugin>
