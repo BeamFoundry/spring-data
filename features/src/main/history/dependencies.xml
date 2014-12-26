@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<features xmlns="http://karaf.apache.org/xmlns/features/v1.2.0" name="spring-data-1.4.4.RELEASE_1-SNAPSHOT">
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.2.0" name="spring-data-1.4.4.RELEASE_2-SNAPSHOT">
     <feature>
         <feature>jpa</feature>
         <feature>spring</feature>
@@ -30,10 +30,10 @@
         <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jaxb-impl/2.2.6_1</bundle>
         <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.joda-time/2.3_1</bundle>
         <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jsr305/2.0.2_1</bundle>
-        <bundle>mvn:org.beamfoundry.bundles.spring-data/org.beamfoundry.bundles.spring-data-commons/1.8.4.RELEASE_1-SNAPSHOT</bundle>
-        <bundle>mvn:org.beamfoundry.bundles.spring-data/org.beamfoundry.bundles.spring-data-jpa/1.6.4.RELEASE_1-SNAPSHOT</bundle>
-        <bundle>mvn:org.beamfoundry.bundles.spring-data/org.beamfoundry.bundles.spring-data-mongodb-cross-store/1.5.4.RELEASE_1-SNAPSHOT</bundle>
-        <bundle>mvn:org.beamfoundry.bundles.spring-data/org.beamfoundry.bundles.spring-data-mongodb/1.5.4.RELEASE_1-SNAPSHOT</bundle>
+        <bundle>mvn:org.beamfoundry.bundles.spring-data/org.beamfoundry.bundles.spring-data-commons/1.8.4.RELEASE_2-SNAPSHOT</bundle>
+        <bundle>mvn:org.beamfoundry.bundles.spring-data/org.beamfoundry.bundles.spring-data-jpa/1.6.4.RELEASE_2-SNAPSHOT</bundle>
+        <bundle>mvn:org.beamfoundry.bundles.spring-data/org.beamfoundry.bundles.spring-data-mongodb-cross-store/${springdata.mongodb.osgi}.RELEASE_2-SNAPSHOT</bundle>
+        <bundle>mvn:org.beamfoundry.bundles.spring-data/org.beamfoundry.bundles.spring-data-mongodb/${springdata.mongodb.osgi}.RELEASE_2-SNAPSHOT</bundle>
         <bundle>mvn:org.mongodb/mongo-java-driver/2.12.1</bundle>
         <bundle>wrap:mvn:commons-lang/commons-lang/2.2</bundle>
     </feature>

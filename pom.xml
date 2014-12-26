@@ -41,8 +41,10 @@
 		<module>spring-data-parent</module>
 		<module>spring-data-commons</module>
 		<module>spring-data-jpa</module>
+		<module>spring-data-jpa-test</module>
 		<module>spring-data-mongodb</module>
 		<module>spring-data-mongodb-cross-store</module>
+		<module>spring-data-mongodb-test</module>
 	</modules>
 
 	<scm>
