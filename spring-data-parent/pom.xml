@@ -24,7 +24,7 @@
     <parent>
         <groupId>org.beamfoundry.bundles.spring-data</groupId>
         <artifactId>org.beamfoundry.bundles.spring-data</artifactId>
-		<version>1.4.4.RELEASE_1-SNAPSHOT</version>
+		<version>1.4.4.RELEASE_1</version>
     </parent>
 
     <groupId>org.beamfoundry.bundles.spring-data</groupId>
@@ -39,19 +39,19 @@
 		<!-- Apache ServiceMix bundles configuration -->
         <servicemix.legal.version>1.0</servicemix.legal.version>
         <servicemix.osgi.export>${servicemix.osgi.export.pkg}*;version=${pkgVersion};-split-package:=merge-first</servicemix.osgi.export>
-        <servicemix.osgi.export.pkg/>
-        <servicemix.osgi.import.pkg/>
-        <servicemix.osgi.private.pkg/>
-        <servicemix.osgi.dynamicimport.pkg/>
+        <servicemix.osgi.export.pkg />
+        <servicemix.osgi.import.pkg />
+        <servicemix.osgi.private.pkg />
+        <servicemix.osgi.dynamicimport.pkg />
         <servicemix.osgi.failok>false</servicemix.osgi.failok>
-        <servicemix.osgi.embed.dependency/>
-        <servicemix.osgi.fragment.host/>
-        <servicemix.osgi.native/>
-        <servicemix.osgi.activator/>
-        <servicemix.osgi.provide.capability/>
-        <servicemix.osgi.require.capability/>
-        <servicemix.spi.provider/>
-        <servicemix.spi.consumer/>
+        <servicemix.osgi.embed.dependency />
+        <servicemix.osgi.fragment.host />
+        <servicemix.osgi.native />
+        <servicemix.osgi.activator />
+        <servicemix.osgi.provide.capability />
+        <servicemix.osgi.require.capability />
+        <servicemix.spi.provider />
+        <servicemix.spi.consumer />
     </properties>
 
     <prerequisites>
