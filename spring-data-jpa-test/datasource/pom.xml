@@ -4,7 +4,7 @@
     <parent>
         <groupId>org.beamfoundry.bundles.spring-data-jpa</groupId>
         <artifactId>org.beamfoundry.bundles.spring-data-jpa.test</artifactId>
-        <version>1.6.4.RELEASE_2</version>
+        <version>1.6.4.RELEASE_3-SNAPSHOT</version>
     </parent>
 
     <groupId>org.beamfoundry.bundles.spring-data-jpa.test</groupId>
