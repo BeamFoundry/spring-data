@@ -139,7 +139,7 @@
 				<version>2.2.1</version>
 				<executions>
 					<execution>
-						<phase>attach-sources</phase>
+						<id>attach-sources</id>
 						<goals>
 							<goal>jar</goal>
 						</goals>
@@ -152,7 +152,7 @@
 				<version>2.10.1</version>
 				<executions>
 					<execution>
-						<phase>attach-javadocs</phase>
+						<id>attach-javadocs</id>
 						<goals>
 							<goal>jar</goal>
 						</goals>
