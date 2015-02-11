@@ -3,7 +3,7 @@
   <parent>
     <artifactId>org.beamfoundry.bundles.spring-data-parent</artifactId>
     <groupId>org.beamfoundry.bundles.spring-data</groupId>
-    <version>1.4.4.RELEASE_2</version>
+    <version>1.4.4.RELEASE_3-SNAPSHOT</version>
     <relativePath>../spring-data-parent/pom.xml</relativePath>
   </parent>
   <modelVersion>4.0.0</modelVersion>
@@ -11,7 +11,7 @@
   <artifactId>org.beamfoundry.bundles.spring-data-jpa</artifactId>
   <packaging>bundle</packaging>
   <name>Bundles :: spring-data :: JPA</name>
-  <version>1.6.4.RELEASE_2</version>
+  <version>1.6.4.RELEASE_3-SNAPSHOT</version>
   <build>
     <plugins>
       <plugin>
@@ -49,7 +49,7 @@
   <properties>
     <pkgVersion>${springdata.jpa}</pkgVersion>
     <servicemix.osgi.import.pkg>com.mysema.query*;version="[${querydsl}, 3.4.0)";resolution:=optional,
-			javax.annotation,
+			javax.annotation;version="1.0",
 			javax.enterprise.*;version="${cdi}";resolution:=optional,
 			javax.persistence,
 			javax.persistence.criteria,

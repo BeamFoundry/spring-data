@@ -44,7 +44,7 @@
         </servicemix.osgi.export.pkg>
         <servicemix.osgi.import.pkg>
 			com.mysema.query*;version="[${querydsl}, 3.4.0)";resolution:=optional,
-			javax.annotation,
+			javax.annotation;version="1.0",
 			javax.enterprise.*;version="${cdi}";resolution:=optional,
 			javax.persistence,
 			javax.persistence.criteria,

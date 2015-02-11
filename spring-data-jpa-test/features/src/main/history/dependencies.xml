@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<features xmlns="http://karaf.apache.org/xmlns/features/v1.2.0" name="spring-data-test-1.4.4.RELEASE_2-SNAPSHOT">
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.2.0" name="spring-data-test-1.4.4.RELEASE_3-SNAPSHOT">
     <feature>
         <feature>eclipselink</feature>
         <feature>eclipselink24</feature>
@@ -7,22 +7,39 @@
         <feature>http</feature>
         <feature>jdbc</feature>
         <feature>jdbc</feature>
+        <feature>jdbc</feature>
         <feature>jndi</feature>
         <feature>jndi</feature>
+        <feature>jndi</feature>
+        <feature>openjpa2</feature>
         <feature>spring-data-jpa</feature>
         <feature>spring-data-jpa</feature>
+        <feature>spring-data-jpa</feature>
+        <feature>transaction</feature>
         <feature>transaction</feature>
         <feature>transaction</feature>
         <feature>transaction</feature>
         <feature>transaction</feature>
         <bundle>mvn:com.fasterxml/classmate/0.9.0</bundle>
         <bundle>mvn:com.google.guava/guava/18.0</bundle>
+        <bundle>mvn:commons-collections/commons-collections/3.2.1</bundle>
+        <bundle>mvn:commons-lang/commons-lang/2.6</bundle>
+        <bundle>mvn:commons-pool/commons-pool/1.6</bundle>
         <bundle>mvn:org.apache.commons/commons-lang3/3.1</bundle>
+        <bundle>mvn:org.apache.geronimo.specs/geronimo-annotation_1.0_spec/1.1.1</bundle>
+        <bundle>mvn:org.apache.geronimo.specs/geronimo-el_1.0_spec/1.0.1</bundle>
+        <bundle>mvn:org.apache.geronimo.specs/geronimo-jms_1.1_spec/1.1.1</bundle>
+        <bundle>mvn:org.apache.geronimo.specs/geronimo-servlet_2.5_spec/1.2</bundle>
+        <bundle>mvn:org.apache.openjpa/openjpa/2.3.0</bundle>
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.ant/1.7.0_6</bundle>
         <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.ant/1.8.2_2</bundle>
         <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.antlr/2.7.7_5</bundle>
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.commons-dbcp/1.4_3</bundle>
         <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.dom4j/1.6.1_5</bundle>
         <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.serp/1.14.1_1</bundle>
-        <bundle>mvn:org.beamfoundry.bundles.spring-data-jpa.test/org.beamfoundry.bundles.spring-data-jpa.test-eclipselink24-adapter/1.6.4.RELEASE_2-SNAPSHOT</bundle>
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.serp/1.14.1_1</bundle>
+        <bundle>mvn:org.apache.xbean/xbean-asm4-shaded/3.16</bundle>
+        <bundle>mvn:org.beamfoundry.bundles.spring-data-jpa.test/org.beamfoundry.bundles.spring-data-jpa.test-eclipselink24-adapter/1.6.4.RELEASE_3-SNAPSHOT</bundle>
         <bundle>mvn:org.eclipse.persistence/javax.persistence/2.0.5</bundle>
         <bundle>mvn:org.eclipse.persistence/org.eclipse.persistence.antlr/2.4.2</bundle>
         <bundle>mvn:org.eclipse.persistence/org.eclipse.persistence.asm/2.4.2</bundle>
@@ -33,6 +50,7 @@
         <bundle>mvn:org.hibernate/hibernate-core/4.2.7.Final</bundle>
         <bundle>mvn:org.hibernate/hibernate-entitymanager/4.2.7.Final</bundle>
         <bundle>mvn:org.hibernate/hibernate-osgi/4.2.7.Final</bundle>
+        <bundle>mvn:org.hsqldb/hsqldb/2.3.1</bundle>
         <bundle>mvn:org.hsqldb/hsqldb/2.3.1</bundle>
         <bundle>mvn:org.hsqldb/hsqldb/2.3.1</bundle>
         <bundle>mvn:org.javassist/javassist/3.18.1-GA</bundle>

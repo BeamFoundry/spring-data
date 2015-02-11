@@ -33,9 +33,9 @@
 	
 	<properties>
         
-        <springdata.commons>1.8.2.RELEASE_2-SNAPSHOT</springdata.commons>
-        <springdata.jpa>1.6.2.RELEASE_2-SNAPSHOT</springdata.jpa>
-        <springdata.mongodb>1.5.2.RELEASE_2-SNAPSHOT</springdata.mongodb>
+        <springdata.commons>1.8.2.RELEASE_3-SNAPSHOT</springdata.commons>
+        <springdata.jpa>1.6.2.RELEASE_3-SNAPSHOT</springdata.jpa>
+        <springdata.mongodb>1.5.2.RELEASE_3-SNAPSHOT</springdata.mongodb>
         
 	</properties>
 

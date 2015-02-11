@@ -43,8 +43,8 @@ public class Eclipselink24Test extends Assert {
                                 maven().groupId("org.apache.karaf")
                                         .artifactId("apache-karaf")
                                         .type("zip")
-                                        .version("3.0.2"))
-                        .karafVersion("3.0.2")
+                                        .version("3.0.3"))
+                        .karafVersion("3.0.3")
                         .name("Apache Karaf")
                         .unpackDirectory(new File("target/pax"))
                         .useDeployFolder(false),

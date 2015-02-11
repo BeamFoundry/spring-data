@@ -18,7 +18,30 @@
 -->
 <features name="spring-data-test-${project.parent.parent.version}" xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
     <repository>mvn:org.beamfoundry.bundles.spring-data/org.beamfoundry.bundles.spring-data.features/${project.parent.parent.version}/xml/features</repository>
-    
+	<feature name="openjpa2" version="2.3.0" description="Apache OpenJPA 2.3.x persistence engine support" resolver="(obr)">
+		<details>Enable Apache OpenJPA as persistence engine.</details>
+		<bundle dependency="true">mvn:org.apache.geronimo.specs/geronimo-annotation_1.0_spec/1.1.1</bundle>
+		<bundle dependency="true">mvn:org.apache.geronimo.specs/geronimo-servlet_2.5_spec/1.2</bundle>
+		<bundle dependency="true">mvn:org.apache.geronimo.specs/geronimo-el_1.0_spec/1.0.1</bundle>
+		<bundle dependency="true">mvn:commons-lang/commons-lang/2.6</bundle>
+		<bundle dependency="true">mvn:commons-collections/commons-collections/3.2.1</bundle>
+		<bundle dependency="true">mvn:commons-pool/commons-pool/1.6</bundle>
+		<bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.commons-dbcp/1.4_3</bundle>
+		<bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.ant/1.7.0_6</bundle>
+		<bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.serp/1.14.1_1</bundle>
+		<bundle dependency="true">mvn:org.apache.geronimo.specs/geronimo-jms_1.1_spec/1.1.1</bundle>
+		<bundle dependency="true">mvn:org.apache.xbean/xbean-asm4-shaded/3.16</bundle>
+		<bundle start-level="29">mvn:org.apache.openjpa/openjpa/2.3.0</bundle>
+	</feature>
+	<feature name="spring-data_openjpa" version="${springdata.jpa}" description="Spring Data openJPA" resolver="(obr)">
+    	<feature>transaction</feature>
+    	<feature>jndi</feature>
+    	<feature>jdbc</feature>
+    	<feature version="2.3.0">openjpa2</feature>
+    	<feature>spring-data-jpa</feature>
+    	<bundle start-level="30">mvn:org.hsqldb/hsqldb/${hsqldb.version}</bundle>
+    </feature>
+   
 	<feature name="eclipselink" version="2.4.2" description="Eclipselink 2.4.2" resolver="(obr)">
 	    <feature>transaction</feature>
         <bundle start-level="20">mvn:org.apache.commons/commons-lang3/3.1</bundle>

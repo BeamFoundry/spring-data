@@ -43,8 +43,8 @@ public class OpenJPATest extends Assert {
                                 maven().groupId("org.apache.karaf")
                                         .artifactId("apache-karaf")
                                         .type("zip")
-                                        .version("3.0.2"))
-                        .karafVersion("3.0.2")
+                                        .version("3.0.3"))
+                        .karafVersion("3.0.3")
                         .name("Apache Karaf")
                         .unpackDirectory(new File("target/pax"))
                         .useDeployFolder(false),
@@ -53,20 +53,20 @@ public class OpenJPATest extends Assert {
                 configureConsole().ignoreLocalConsole(),
                 logLevel(LogLevel.INFO),
 
-                features(
+                /*features(
                         maven().groupId("org.apache.karaf.features").artifactId("enterprise").type("xml")
-                                .classifier("features").version("3.0.2"),
-                        "transaction", "jndi", "jdbc", "jpa", "openjpa"),
+                                .classifier("features").version("3.0.3"),
+                        "transaction", "jndi", "jdbc", "jpa", "openjpa"),*/
                 features(
                         maven().groupId("org.beamfoundry.bundles.spring-osgi").
                         		artifactId("org.beamfoundry.bundles.spring-osgi.features").
                                 type("xml").classifier("features").version("LATEST"),
                         "spring-dm"),
-                features(
-                        maven().groupId("org.beamfoundry.bundles.spring-data").
-                        		artifactId("org.beamfoundry.bundles.spring-data.features").
-                                type("xml").classifier("features").version("LATEST"),
-                        "spring-data-jpa"),
+				features(
+						maven().groupId("org.beamfoundry.bundles.spring-data-jpa.test").
+								artifactId("org.beamfoundry.bundles.spring-data-jpa.test.features").
+								type("xml").classifier("features").version("LATEST"),
+						"spring-data_openjpa"),
     
                 mavenBundle().groupId("org.hsqldb").artifactId("hsqldb").versionAsInProject(),
 
